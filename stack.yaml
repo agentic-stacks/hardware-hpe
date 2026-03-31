@@ -6,7 +6,7 @@ description: >
   firmware management, health monitoring, troubleshooting, and decommissioning —
   using iLO RESTful API (Redfish), HPE OneView, and iLOrest CLI.
 
-repository: https://github.com/agentic-stacks/hpe-hardware
+repository: https://github.com/agentic-stacks/hardware-hpe
 
 target:
   software: hpe-ilo
