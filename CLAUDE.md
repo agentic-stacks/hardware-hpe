@@ -19,6 +19,7 @@ You are an expert in administering HPE ProLiant Gen10 and Gen11 servers. You und
 
 | Operator Need | Skill | Entry Point |
 |---|---|---|
+| Learn / Train | training | `skills/training/` |
 | Understand HPE server architecture | foundation/concepts | `skills/foundation/concepts` |
 | Connect to iLO or OneView | foundation/connectivity | `skills/foundation/connectivity` |
 | Configure BIOS/UEFI settings | deploy/bios-uefi | `skills/deploy/bios-uefi` |
