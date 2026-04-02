@@ -1,0 +1,11 @@
+# Operator project artifacts
+*.orig
+secrets.yaml
+inventory.yaml
+configs/
+profiles/
+logs/
+scripts/
+
+# OS
+.DS_Store

@@ -1,0 +1,92 @@
+name: hpe-hardware
+namespace: agentic-stacks
+version: 0.1.0
+description: >
+  Complete operational knowledge for administering HPE ProLiant Gen10 and Gen11
+  servers. Covers the full lifecycle — discovery, BIOS/RAID/network configuration,
+  firmware management, health monitoring, troubleshooting, and decommissioning —
+  using iLO RESTful API (Redfish), HPE OneView, and iLOrest CLI.
+
+repository: https://github.com/agentic-stacks/hpe-hardware
+
+target:
+  software: hpe-ilo
+  versions:
+    - "iLO 5 (Gen10)"
+    - "iLO 6 (Gen11)"
+
+skills:
+  - name: concepts
+    entry: skills/foundation/concepts
+    description: iLO architecture, Redfish API model, OneView concepts, HPE terminology
+  - name: connectivity
+    entry: skills/foundation/connectivity
+    description: Connecting to iLO and OneView, iLOrest setup, inventory management
+  - name: bios-uefi
+    entry: skills/deploy/bios-uefi
+    description: BIOS/UEFI configuration, boot order, secure boot, performance profiles
+  - name: storage
+    entry: skills/deploy/storage
+    description: RAID configuration, Smart Array and MR/SR controllers, disk management
+  - name: networking
+    entry: skills/deploy/networking
+    description: NIC configuration, VLAN, PXE/HTTP boot, FlexibleLOM
+  - name: firmware
+    entry: skills/deploy/firmware
+    description: SPP, firmware updates, baselines, compliance checking, rollback
+  - name: health-check
+    entry: skills/operations/health-check
+    description: Hardware health validation, sensors, IML/AHS log review
+  - name: power-mgmt
+    entry: skills/operations/power-mgmt
+    description: Power on/off/reset, power capping, efficiency, UID LED
+  - name: licensing
+    entry: skills/operations/licensing
+    description: iLO Standard/Advanced/Premium licensing and feature activation
+  - name: remote-console
+    entry: skills/operations/remote-console
+    description: Virtual media, remote console, OS provisioning preparation
+  - name: lifecycle
+    entry: skills/operations/lifecycle
+    description: Warranty, decommissioning, secure erase, asset tracking
+  - name: troubleshooting
+    entry: skills/diagnose/troubleshooting
+    description: Symptom-based diagnostic decision trees for hardware issues
+  - name: log-analysis
+    entry: skills/diagnose/log-analysis
+    description: IML, AHS, and iLO event log interpretation
+  - name: known-issues
+    entry: skills/reference/known-issues
+    description: Version-specific bugs and workarounds for iLO 5/6 and Gen10/Gen11
+  - name: compatibility
+    entry: skills/reference/compatibility
+    description: Firmware and component compatibility matrices
+  - name: decision-guides
+    entry: skills/reference/decision-guides
+    description: RAID level selection, NIC config patterns, firmware update strategies
+
+project:
+  structure:
+    - inventory.yaml
+    - configs/
+    - configs/bios-baseline.json
+    - configs/raid-config.json
+    - configs/firmware-baseline.json
+    - profiles/
+    - profiles/oneview/
+    - logs/
+    - logs/ahs/
+    - scripts/
+    - scripts/health-check.sh
+    - scripts/firmware-update.sh
+
+requires:
+  tools:
+    - name: ilorest
+      description: HPE iLOrest CLI for Redfish operations
+    - name: curl
+      description: Direct Redfish API calls
+    - name: jq
+      description: JSON response parsing
+
+depends_on: []
