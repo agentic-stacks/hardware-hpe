@@ -1,6 +1,5 @@
 name: hardware-hpe
 namespace: agentic-stacks
-version: 0.1.0
 description: >
   Complete operational knowledge for administering HPE ProLiant Gen10 and Gen11
   servers. Covers the full lifecycle — discovery, BIOS/RAID/network configuration,
